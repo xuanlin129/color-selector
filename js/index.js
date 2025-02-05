@@ -61,3 +61,5 @@ Draggable.create('#color-control', {
     document.body.style.setProperty('--vh', windowsVH + 'px');
   });
 })();
+
+window.addEventListener('resize', safariHacks);
