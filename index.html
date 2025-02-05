@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <title>顏色選擇器</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <section id="color"></section>
+  <section id="color-control">
+    <div class="control-box">
+      <span class="color-name">R</span>
+      <input class="range" type="range" name="red" id="red" min="0" max="255" step="1" value="0">
+      <div class="other">
+        <input type="text" class="rgb-text" value="0" maxlength="3">
+        <button class="btn">隨機</button>
+      </div>
+    </div>
+    <div class="control-box">
+      <span class="color-name">G</span>
+      <input class="range" type="range" name="green" id="green" min="0" max="255" step="1" value="0">
+      <div class="other">
+        <input type="text" class="rgb-text" value="0" maxlength="3">
+        <button class="btn">隨機</button>
+      </div>
+    </div>
+    <div class="control-box">
+      <span class="color-name">B</span>
+      <input class="range" type="range" name="blue" id="blue" min="0" max="255" step="1" value="0">
+      <div class="other">
+        <input type="text" class="rgb-text" value="0" maxlength="3">
+        <button class="btn">隨機</button>
+      </div>
+    </div>
+    <div class="d-flex">
+      <p style="white-space:nowrap;">色碼：#</p>
+      <input id="color-num" type="text" value="000000" maxlength="6">
+    </div>
+  </section>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Draggable.min.js'></script>
+  <script src="./js/index.js"></script>
+
+</body>
+
+</html>
