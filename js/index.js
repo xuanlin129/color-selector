@@ -54,6 +54,12 @@ Draggable.create('#color-control', {
   dragClickables: false,
 });
 
+function isMobileDevice() {
+  const isMobileAgent = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  const isSmallScreen = window.matchMedia('(max-width: 768px)').matches;
+  return isMobileAgent || isSmallScreen;
+}
+
 function safariHacks() {
   let windowsVH = window.innerHeight / 100;
   document.body.style.setProperty('--vh', windowsVH + 'px');
@@ -62,5 +68,6 @@ function safariHacks() {
   });
 }
 
-safariHacks();
-window.addEventListener('resize', safariHacks);
+if (isMobileDevice()) {
+  safariHacks();
+}
